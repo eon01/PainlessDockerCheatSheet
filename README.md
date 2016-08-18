@@ -1,9 +1,12 @@
 # PainlessDockerCheatSheet
 
-## Delete all containers
+## Containers
+### Delete all containers
 ``` docker rm $(docker ps -a -q) ```
 
-## Delete all images
+## Images
+
+### Delete all images
 ``` docker rmi $(docker images -q) ```
 
 ## Volumes
