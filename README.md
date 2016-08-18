@@ -1,22 +1,18 @@
 # PainlessDockerCheatSheet
 
 ## Delete all containers
-```
-docker rm $(docker ps -a -q)
-```
+``` docker rm $(docker ps -a -q) ```
 
 ## Delete all images
-```
-docker rmi $(docker images -q)
-```
+``` docker rmi $(docker images -q) ```
 
 ## Volumes
+
 ### List All Volumes
 ``` docker volume ls -qf dangling=true ```
 
 ### Cleanup Volumes
-
-```
-docker volume rm $(docker volume ls -qf dangling=true)
-```
+``` docker volume rm $(docker volume ls -qf dangling=true) ```
+or
+``` docker volume ls -qf dangling=true | xargs -r docker volume rm ```
 
