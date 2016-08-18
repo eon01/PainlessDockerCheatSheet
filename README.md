@@ -13,6 +13,8 @@
 
 ### Cleanup Volumes
 ``` docker volume rm $(docker volume ls -qf dangling=true) ```
+
 or
+
 ``` docker volume ls -qf dangling=true | xargs -r docker volume rm ```
 
